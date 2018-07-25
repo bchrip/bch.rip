@@ -1,8 +1,27 @@
 <html>
 <head>
 <title>SMALL BLOCKS KILL BABIES</title>
-<body>
-<div>
-  <img src="emptyhighway.png" width="100%" />
-</div>
+<body style="text-align: center">
+  <div id="words"  style="font-family: sans-serif; font-size: xx-large; text-align: center; color: black; text-decoration: none"></div>
+  <a href="./index.html">Show me another!</a>
+<a id="linky">
+  <div style="text-align: center">
+    <img id="image" width="85%" />
+  </div>
+</a>
+<script type="text/javascript">
+var things = [
+  ["But I thought we needed bigger blocks?", 'emptyhighway.png', 'https://txhighway.com/'],
+  ["There are no cases or businesses being built around BCH...", 'bity.jpg', 'https://www.reddit.com/r/CryptoCurrency/comments/91tgqy/bitcoincom_emailed_bity_threatening_to_remove/']
+]
+
+var idx = Math.floor(Math.random()*things.length)
+var el = things[idx]
+var txt = el[0], imgsrc = el[1], linky = el[2]
+
+document.getElementById('image').src = 'img/' + imgsrc
+document.getElementById('words').innerHTML = txt
+document.getElementById('linky').href = linky
+document.getElementById('linky').title = linky
+</script>
 </body>
